@@ -8,7 +8,7 @@ tags:
   - k3s
   - kubernetes
 date: 2019-09-28T16:31:55+00:00
-draft: true
+draft: false
 ---
 
 With the knowledge that there are 234924385734 other similar blog posts out there, I'm sharing my take on getting started with Kubernetes.
