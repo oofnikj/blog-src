@@ -1,0 +1,31 @@
+baseURL: https://badgateway.qc.to/
+languageCode: en-us
+title: BAD GATEWAY
+theme: m10c
+sectionPagesMenu: main
+permalinks:
+  posts: /:title
+params:
+  author: oofnik
+  avatar: /bg.png
+  favicon: /bg.png 
+  menu_item_separator: "&#xB7"
+  description: a collection of notes about dev and ops things
+  social:
+    - name: github
+      url: https://github.com/oofnikj
+    - name: gitlab
+      url: https://gitlab.com/oofnik
+    - name: linkedin
+      url: https://linkedin.com/in/jordan.sokolic
+  style:
+    darkestColor: "#242930"
+    darkColor: "#353b43"
+    primaryColor: "#48ba66"
+    lightColor: "#afbac4"
+    lightestColor: "#f6f6f6"
+menu:
+  main:
+    - identifier: main
+      name: Tags
+      url: /tags
