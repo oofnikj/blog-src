@@ -1,3 +1,7 @@
 [submodule "themes/m10c"]
 	path = themes/m10c
 	url = https://github.com/vaga/hugo-theme-m10c.git
+[submodule "public"]
+	path = public
+	url = git@github.com:oofnikj/oofnikj.github.io
+	branch = main
