@@ -12,6 +12,14 @@
   border: 0rem;
 }
 
+.app-header h1, .app-container h1 {
+  text-transform: uppercase;
+}
+
+.app-header {
+  text-transform: lowercase;
+}
+
 body {
   font-family: 'Alegreya Sans';
   font-size: 1.1em;
