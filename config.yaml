@@ -18,6 +18,8 @@ params:
       url: https://gitlab.com/oofnik
     - name: linkedin
       url: https://linkedin.com/in/jordan.sokolic
+    - name: rss
+      url: /index.xml
   style:
     darkestColor: "#242930"
     darkColor: "#353b43"
