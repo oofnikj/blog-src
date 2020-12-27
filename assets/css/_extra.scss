@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+    url('../fonts/alegreya-sans-v13-latin-regular.woff2') format('woff2'),
+    url('../fonts/alegreya-sans-v13-latin-regular.woff') format('woff');
+}
+
+.app-header-avatar {
+  border-radius: 0%;
+  border: 0rem;
+}
+
+body {
+  font-family: 'Alegreya Sans';
+  font-size: 1.1em;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+hr {
+  border: none;
+  width: 60%;
+  border-bottom: 2px solid #afbac4;
+}
+
+.posts-list-item-description {
+  display: block;
+  font-size: .8em;
+  padding-left: 2em;
+}
