@@ -1,0 +1,4 @@
+{{ $dataJSON := getJSON "https://api.github.com/repos/"  (.Get "repo")  "/contents/"  (.Get "file") "?ref=" (.Get "ref") }}
+{{ $content := base64Decode $dataJSON.content }}
+
+{{ highlight $content (.Get "lang") (.Get "options") }}
