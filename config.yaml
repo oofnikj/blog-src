@@ -17,7 +17,7 @@ params:
     - name: gitlab
       url: https://gitlab.com/oofnik
     - name: linkedin
-      url: https://linkedin.com/in/jordan.sokolic
+      url: https://linkedin.com/in/jordan-sokolic
     - name: rss
       url: /index.xml
   style:
