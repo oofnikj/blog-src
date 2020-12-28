@@ -72,7 +72,7 @@ My next attempt involved deploying an ingress controller to handle load balancin
 
 #### Layer 7 - Traefik
 
-Since I'd read a lot about [Traefik](https://traefik.io/) and played around with it while writing my [local Kubernetes development guide](https://badgateway.qc.to/local-development-with-kubernetes/), I decided to give it a try.
+Since I'd read a lot about [Traefik](https://traefik.io/) and played around with it while writing my [local Kubernetes development guide]({{< ref "local-development-with-kubernetes" >}}), I decided to give it a try.
 
 First, I wrote an `Ingress` object to be picked up by the Traefik controller. Then, per the [docs](https://docs.traefik.io/v1.7/configuration/backends/kubernetes/#annotations), I had to add some annotations to my app's service definition to limit the maximum number of connections:
 

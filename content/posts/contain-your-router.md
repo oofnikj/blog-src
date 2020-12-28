@@ -153,7 +153,7 @@ It's certainly possible to configure OpenWRT without a WAN zone and to set it up
 
 Check out the links below for references on how to configure OpenWRT to your liking.
 
-Also, have a look at how I [patched](https://badgateway.qc.to/kernel-patching-with-dkms/) my kernel to broadcast 802.11ac Wi-Fi at 500 Mbps.
+Also, have a look at how I [patched]({{< ref "kernel-patching-with-dkms" >}}) my kernel to broadcast 802.11ac Wi-Fi at 500 Mbps.
 
 * * *
 

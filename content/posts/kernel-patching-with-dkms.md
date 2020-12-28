@@ -55,7 +55,7 @@ Credit to Renaud Cerrato's [DIY router article](https://medium.com/@renaudcerrat
 
 ## References
 
-1. [https://badgateway.qc.to/contain-your-router](https://badgateway.qc.to/contain-your-router)
+1. [https://badgateway.qc.to/contain-your-router]({{< ref "contain-your-router" >}})
 2. [https://wireless.wiki.kernel.org/en/developers/regulatory/wireless-regdb](https://wireless.wiki.kernel.org/en/developers/regulatory/wireless-regdb)
 3. [https://wireless.wiki.kernel.org/en/users/drivers/ath#regulatory](https://wireless.wiki.kernel.org/en/users/drivers/ath#regulatory)
 4. [https://github.com/openwrt/openwrt/blob/master/package/kernel/mac80211/patches/ath/402-ath\_regd\_optional.patch](https://github.com/openwrt/openwrt/blob/master/package/kernel/mac80211/patches/ath/402-ath_regd_optional.patch) and [https://github.com/openwrt/openwrt/blob/master/package/kernel/mac80211/patches/ath/406-ath\_relax\_default\_regd.patch](https://github.com/openwrt/openwrt/blob/master/package/kernel/mac80211/patches/ath/406-ath_relax_default_regd.patch)
