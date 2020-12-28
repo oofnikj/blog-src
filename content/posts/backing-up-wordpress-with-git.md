@@ -16,9 +16,12 @@ So I started this blog, and it's running on a virtual server somewhere in the cl
 
 ---
 
-This worried me. So I set out to find a backup solution. <br><br>After some googling, here's what I came up with.
+This worried me. So I set out to find a backup solution. 
+After some googling, here's what I came up with.
 
-<p style="text-align:left">I found a plugin called <a href="https://wordpress.org/plugins/revisr/">Revisr</a> which can automagically commit changes to your WordPress directory and/or database to a Git repo, and push them to a remote. After activating it, a new section gets added to your admin dashboard where you can configure the plugin's settings, like the path to your remote, authentication, etc.<br><br>So I did all of that, and lo and behold:
+I found a plugin called [Revisr](https://wordpress.org/plugins/revisr/) which can automagically commit changes to your WordPress directory and/or database to a Git repo, and push them to a remote. After activating it, a new section gets added to your admin dashboard where you can configure the plugin's settings, like the path to your remote, authentication, etc.
+
+So I did all of that, and lo and behold:
 
 {{< figure src=error.png >}}
 
