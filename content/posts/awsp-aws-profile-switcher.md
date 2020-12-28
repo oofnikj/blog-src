@@ -1,6 +1,6 @@
 ---
 author: "oofnik"
-title: "awsp aws profile switcher"
+title: "awsp: AWS profile switcher"
 summary: |
   Simple script to make switching between AWS profiles easier.
 tags: 
