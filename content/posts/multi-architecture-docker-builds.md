@@ -1,8 +1,6 @@
 ---
 author: "oofnik"
 title: "multi-architecture docker builds"
-aliases:
-  - /multi-architecture-docker-builds/
 summary: |
   Wouldn't it be nice to have your Docker images come out of the oven ready to run on _anything_?
 tags: 
