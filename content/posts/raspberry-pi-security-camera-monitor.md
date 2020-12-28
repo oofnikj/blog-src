@@ -1,4 +1,5 @@
 ---
+author: "oofnik"
 title: "raspberry pi security camera monitor"
 summary: |
   A remote Raspberry Pi-powered display for a video surveillance system.
