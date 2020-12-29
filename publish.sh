@@ -8,6 +8,6 @@ hugo -d ${PUBLIC_DIR}
 
 pushd ${PUBLIC_DIR}
 git add .
-git commit -am 'publish' --allow-empty
+git commit -am 'publish' || true
 popd
 git add ${PUBLIC_DIR}
