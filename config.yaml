@@ -5,6 +5,7 @@ theme: m10c
 sectionPagesMenu: main
 permalinks:
   posts: /:title
+googleAnalytics: UA-186231180-1
 params:
   author: oofnik
   avatar: /bg.png
