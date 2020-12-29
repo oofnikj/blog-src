@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  <head>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="shortcut icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}" />
+    <meta charset="utf-8" />
+    {{ hugo.Generator }}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="{{ .Site.Params.author | default "John Doe" }}" />
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+    {{ template "_internal/google_analytics.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="{{ .Site.BaseURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
+      <h1>{{ .Site.Title }}</h1>
+      {{- with .Site.Menus.main }}
+      <nav class="app-header-menu">
+        {{- range $key, $item := . }}
+          {{- if ne $key 0 }}
+            {{ $.Site.Params.menu_item_separator | default " - " | safeHTML }}
+          {{ end }}
+          <a class="app-header-menu-item" href="{{ $item.URL }}">{{ $item.Name }}</a>
+        {{- end }}
+      </nav>
+      {{- end }}
+      <p>{{ .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." }}</p>
+      <div class="app-header-social">
+        {{ range .Site.Params.social }}
+          <a target="_blank" href="{{ .url }}" rel="noreferrer noopener">{{ partial "icon.html" (dict "ctx" $ "name" .name ) }}</a>
+        {{ end }}
+      </div>
+      <hr style="border: 0px; border-top: 1px dashed {{ .Site.Params.style.lightestColor }}; width: 10%;">
+      <div class="container tagcloud">
+        {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+          {{- $largestFontSize := 1.4 }}
+          {{- $smallestFontSize := 0.8 }}
+          {{- $fontSpread := sub $largestFontSize $smallestFontSize }}
+          {{- $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+          {{- $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+          {{- $spread := sub $max $min }}
+          {{- $fontStep := div $fontSpread $spread }}
+            {{- range $name, $taxonomy := $.Site.Taxonomies.tags }}
+              {{- $tagCount := len $taxonomy.Pages }}
+              {{- $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
+              {{- $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+              {{- $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
+                <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}" 
+                class="tagcloud-item" style="font-size: {{ $currentFontSize }}rem;">
+                  {{ $name }}
+                </a>
+            {{- end }}
+        {{- end }}
+    </div>
+    </header>
+    <main class="app-container">
+      {{ block "main" . }}
+        {{ .Content }}
+      {{ end }}
+    </main>
+  </body>
+</html>
