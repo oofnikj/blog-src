@@ -10,4 +10,5 @@ pushd ${PUBLIC_DIR}
 git add .
 git commit -am 'publish' || true
 popd
+env | grep GIT
 git add ${PUBLIC_DIR}

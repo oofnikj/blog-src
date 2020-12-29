@@ -39,6 +39,10 @@ Finally, configure Git to push changes to submodules as needed:
 $ git config push.recurseSubmodules on-demand
 ```
 
-Publishing changes is just a  `git add . && git commit` away.
+Create an alias to publish:
+
+```sh
+$ git config alias.publish '! f() { git commit -a -m "$1" && git push ; } ; f'
+```
 
 Bye, Wordpress.
