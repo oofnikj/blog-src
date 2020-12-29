@@ -44,3 +44,14 @@ hr {
 .posts-list-item-description {
   padding-left: 1em;
 }
+
+ // get rid of duplicate padding element in pre-formatted content
+.post-content td:nth-child(2) pre {
+  border: 0;
+}
+
+//border around pre-formatted tables
+.post-content div.highlight div {
+  background-color: unset !important;
+}
+
