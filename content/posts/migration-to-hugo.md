@@ -33,4 +33,12 @@ $ cd .git/hooks && ln -s ../../publish.sh pre-commit
 
 As long as `publish.sh` is executable, the commit hook will regenerate your static site and update the submodule refrence.
 
+Finally, configure Git to push changes to submodules as needed:
+
+```sh
+$ git config push.recurseSubmodules on-demand
+```
+
+Publishing changes is just a  `git add . && git commit` away.
+
 Bye, Wordpress.
