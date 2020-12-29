@@ -7,6 +7,6 @@ rm -rf ${PUBLIC_DIR}/*
 hugo -d ${PUBLIC_DIR}
 
 pushd ${PUBLIC_DIR}
-git commit -am 'publish'
+git commit -am 'publish' --allow-empty
 popd
-git submodule update public
+git add ${PUBLIC_DIR}
