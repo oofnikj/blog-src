@@ -42,7 +42,7 @@ $ git config push.recurseSubmodules on-demand
 Create an alias to publish:
 
 ```sh
-$ git config alias.publish '! f() { git commit -a -m "$1" && git push ; } ; f'
+$ git config alias.publish '! f() { git add . && git commit -m "$1" && git push ; } ; f'
 ```
 
 Bye, Wordpress.
