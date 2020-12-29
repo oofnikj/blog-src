@@ -3,7 +3,7 @@ set -eux
 
 PUBLIC_DIR=public
 
-hugo -d ${PUBLIC_DIR}
+hugo -d ${PUBLIC_DIR} --ignoreCache
 
 pushd ${PUBLIC_DIR}
 git add .
