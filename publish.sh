@@ -11,4 +11,4 @@ git commit -am 'publish' || true
 popd
 git add ${PUBLIC_DIR}
 git commit -m '${1:-"auto publish"}' || true
-git push
+git push --recurse-submodules=on-demand
