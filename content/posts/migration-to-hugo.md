@@ -21,28 +21,8 @@ And then I found [wordpress-export-to-markdown](https://github.com/lonekorean/wo
 
 I more or less followed the Hugo [getting started guide](https://gohugo.io/getting-started/quick-start/) using the Git submodule layout. After finding a [theme](https://github.com/vaga/hugo-theme-m10c), doing some [tweaking](https://mertbakir.gitlab.io/hugo/tag-cloud-in-hugo/), and organizing the content, things were more or less ready to publish.
 
-As a finishing touch, I added a pre-commit hook to rebuild the site and commit the changes to the submodule repository whenever I add or change content.
+Finally, a script to publish new changes:
 
 {{< github repo="oofnikj/blog-src" ref="main" file="publish.sh" lang="sh" options="linenos=table" >}}
-
-From the source repository:
-
-```sh
-$ cd .git/hooks && ln -s ../../publish.sh pre-commit
-```
-
-As long as `publish.sh` is executable, the commit hook will regenerate your static site and update the submodule refrence.
-
-Finally, configure Git to push changes to submodules as needed:
-
-```sh
-$ git config push.recurseSubmodules on-demand
-```
-
-Create an alias to publish:
-
-```sh
-$ git config alias.publish '! f() { git add . && git commit -m "$1" && git push ; } ; f'
-```
 
 Bye, Wordpress.
