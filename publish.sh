@@ -3,7 +3,6 @@ set -eux
 
 PUBLIC_DIR=public
 
-rm -rf ${PUBLIC_DIR}/*
 hugo -d ${PUBLIC_DIR}
 
 pushd ${PUBLIC_DIR}
