@@ -217,7 +217,7 @@ Now that we've seen how to handle multi-architecture Docker images locally, let'
 
 It's probably best to put the full example here and work backwards, explaining what each part does:
 
-{{< github repo="oofnikj/nuttssh" ref="multiarch" file=".gitlab-ci.yml" lang="yaml" options="linenos=inline" >}}
+{{< github repo="oofnikj/nuttssh" ref="multiarch" file=".gitlab-ci.yml" lang="yaml" options="linenos=table" >}}
 
 First of all, we're running that same `multiarch/qemu-user-static` container from before to register our foreign binary formats with the kernel. Note that your GitLab runner must allow running containers in privileged mode for this to work. GitLab shared runners allow this, but if you're using your own runners, privileged containers must be explicitly allowed in the runner configuration.
 

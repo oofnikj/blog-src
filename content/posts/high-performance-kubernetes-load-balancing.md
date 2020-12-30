@@ -138,7 +138,7 @@ The one that eventually did the trick, as counter-intuitive as it may seem, was 
 
 Since the author of the comment on the bug report that saved the day already linked to the relevant library used by Traefik, I perused some more and found this [tidbit](https://github.com/golang/go/blob/release-branch.go1.12/src/net/http/transport.go#L71-L74):
 
-{{< highlight go "linenos=inline, linenostart=71" >}}
+{{< highlight go "linenos=table, linenostart=71" >}}
 // By default, Transport caches connections for future re-use.
 // This may leave many open connections when accessing many hosts.
 // This behavior can be managed using Transport's CloseIdleConnections method

@@ -18,4 +18,4 @@ I've been working on `awsp`, an AWS profile switcher. I've only tested it on bas
 
 Tab completion for profiles is available for `fzf` and plain bash.
 
-{{< github repo="oofnikj/oneliners" ref="master" file="aws/awsp.bash" lang="sh" options="linenos=inline" >}}
+{{< github repo="oofnikj/oneliners" ref="master" file="aws/awsp.bash" lang="sh" options="linenos=table" >}}
