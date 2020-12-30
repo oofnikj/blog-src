@@ -38,7 +38,7 @@ code {
 hr {
   border: none;
   width: 60%;
-  border-bottom: 2px solid #afbac4;
+  border-bottom: 2px solid $lightest-color;
 }
 
 .posts-list-item-description {
@@ -50,7 +50,7 @@ hr {
   border: 0;
 }
 
-//border around pre-formatted tables
+// border around pre-formatted tables
 .post-content div.highlight div {
   background-color: unset !important;
 }
