@@ -35,6 +35,11 @@ code {
   font-size: 0.9em;
 }
 
+pre code {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
 hr {
   border: none;
   width: 60%;
@@ -44,14 +49,3 @@ hr {
 .posts-list-item-description {
   padding-left: 1em;
 }
-
- // get rid of duplicate padding element in pre-formatted content
-.post-content td:nth-child(2) pre {
-  border: 0;
-}
-
-// border around pre-formatted tables
-.post-content div.highlight div {
-  background-color: unset !important;
-}
-
