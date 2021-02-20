@@ -101,20 +101,18 @@ resource "azurerm_storage_blob" "datadog_logs_sender" {
   source                 = data.archive_file.function.output_path
 }
 
+# The 'implicit' app service plan discussed earlier
 resource "azurerm_app_service_plan" "datadog_logs_sender" {
   name = format(
   "%s-%s", "datadog-logs-sender", data.azurerm_resource_group.rg.name)
   location            = data.azurerm_resource_group.rg.location
   resource_group_name = data.azurerm_resource_group.rg.name
-  kind                = "linux"
+  kind                = "functionapp"
   reserved            = true
 
   sku {
     tier = "Dynamic" # we're using serverless mode
     size = "Y1"
-  }
-  lifecycle {
-    ignore_changes = [kind] # yucky provider bug
   }
 }
 
