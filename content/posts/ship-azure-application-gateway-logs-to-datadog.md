@@ -72,7 +72,7 @@ Inputs:
 - `datadog_api_key`: Datadog API key
 
 {{< highlight hcl "linenos=table" >}}
-{{< include "static/ship-azure-application-gateway-logs-to-datadog/main.tf" >}}
+{{< include "main.tf" >}}
 {{< /highlight >}}
 
 
